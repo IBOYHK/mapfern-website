@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mapfern Travel | Vacations, group trips and academic travel</title>
+<meta name="description" content="Mapfern Travel plans vacations, group trips and academic travel from Gaithersburg, Maryland. Personal planning by Shawn Shih, affiliated with Archer Travel Service.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%231f3b2d'/><text x='16' y='22' font-family='Georgia' font-size='17' fill='%23f3eee2' text-anchor='middle'>M</text></svg>">
+<link rel="preconnect" href="https://api.fontshare.com">
+<link href="https://api.fontshare.com/v2/css?f[]=zodiak@400,500,700&f[]=general-sans@400,500,600&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="assets/hero.webp">
+<style>
+:root{
+  --font-display:'Zodiak',Georgia,serif;
+  --font-body:'General Sans','Segoe UI',system-ui,sans-serif;
+  --fern:#1f3b2d; --fern-2:#2d5340; --moss:#6b8f5e; --cream:#f5f1e6; --paper:#fbf9f3;
+  --ink:#1c211d; --muted:#5b6359; --line:#dcd6c6; --clay:#b8683f;
+  --text-xs:clamp(.78rem,.75rem + .15vw,.85rem);
+  --text-sm:clamp(.875rem,.85rem + .15vw,.95rem);
+  --text-base:clamp(1rem,.96rem + .2vw,1.075rem);
+  --text-lg:clamp(1.15rem,1.05rem + .45vw,1.4rem);
+  --text-xl:clamp(1.6rem,1.3rem + 1.3vw,2.4rem);
+  --text-hero:clamp(2.5rem,1.6rem + 4.4vw,5.4rem);
+  --wrap:min(1180px,100% - 2*clamp(1.25rem,4vw,3rem));
+  --section:clamp(4rem,9vw,8rem);
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-body);font-size:var(--text-base);line-height:1.65;color:var(--ink);background:var(--paper);-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+.wrap{width:var(--wrap);margin-inline:auto}
+h1,h2{font-family:var(--font-display);font-weight:500;line-height:1.08;letter-spacing:-.01em}
+h2{font-size:var(--text-xl)}
+h3{font-size:var(--text-lg);font-weight:600;line-height:1.3}
+.eyebrow{font-size:var(--text-xs);letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--moss)}
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.85rem 1.4rem;border-radius:999px;font-size:var(--text-sm);font-weight:600;text-decoration:none;transition:background .2s,color .2s,transform .2s}
+.btn-primary{background:var(--cream);color:var(--fern)}
+.btn-primary:hover{background:#fff;transform:translateY(-1px)}
+.btn-ghost{border:1px solid rgba(245,241,230,.55);color:var(--cream)}
+.btn-ghost:hover{background:rgba(245,241,230,.12)}
+.btn-dark{background:var(--fern);color:var(--cream)}
+.btn-dark:hover{background:var(--fern-2)}
+:focus-visible{outline:2px solid var(--clay);outline-offset:3px}
+
+/* header */
+header{position:absolute;inset:0 0 auto;z-index:5;color:var(--cream)}
+.nav{display:flex;align-items:center;justify-content:space-between;padding-block:1.4rem}
+.brand{font-family:var(--font-display);font-size:1.45rem;font-weight:500;text-decoration:none;letter-spacing:-.01em}
+.brand span{font-family:var(--font-body);font-size:var(--text-xs);letter-spacing:.16em;text-transform:uppercase;margin-left:.45rem;opacity:.8}
+.nav ul{display:flex;gap:1.8rem;list-style:none;padding:0;font-size:var(--text-sm)}
+.nav ul a{text-decoration:none;opacity:.9}
+.nav ul a:hover{opacity:1;text-decoration:underline;text-underline-offset:4px}
+
+/* hero */
+.hero{position:relative;min-height:min(92vh,880px);display:flex;align-items:flex-end;color:var(--cream);overflow:hidden;background:var(--fern)}
+.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(18,34,26,.82) 0%,rgba(18,34,26,.5) 48%,rgba(18,34,26,.08) 100%),linear-gradient(0deg,rgba(18,34,26,.55),transparent 45%)}
+.hero .wrap{position:relative;z-index:2;padding-block:9rem clamp(3.5rem,8vw,6.5rem)}
+.hero h1{font-size:var(--text-hero);max-width:13ch}
+.hero p{max-width:46ch;margin-top:1.4rem;font-size:var(--text-lg);line-height:1.5;opacity:.92}
+.hero .actions{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:2.2rem}
+
+/* services */
+section{padding-block:var(--section)}
+.intro{display:grid;grid-template-columns:1fr 1.25fr;gap:clamp(2rem,6vw,6rem);align-items:end;margin-bottom:clamp(2.5rem,5vw,4rem)}
+.intro p{color:var(--muted);max-width:52ch}
+.services{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line)}
+.service{padding:2rem 2rem 2.2rem 0;border-right:1px solid var(--line)}
+.service+.service{padding-left:2rem}
+.service:last-child{border-right:0}
+.service .num{font-family:var(--font-display);font-size:1.1rem;color:var(--clay)}
+.service h3{margin:.7rem 0 .6rem}
+.service p{color:var(--muted);font-size:var(--text-sm)}
+
+/* academic feature */
+.feature{background:var(--fern);color:var(--cream)}
+.feature-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:clamp(2rem,6vw,5.5rem);align-items:center}
+.feature img{border-radius:6px;aspect-ratio:4/3;object-fit:cover;width:100%}
+.feature .eyebrow{color:#a9c79a}
+.feature h2{margin:.8rem 0 1.2rem}
+.feature p{opacity:.88;max-width:50ch}
+.feature ul{margin-top:1.6rem;padding:0;list-style:none;display:grid;gap:.7rem;font-size:var(--text-sm)}
+.feature li{padding-left:1.4rem;position:relative}
+.feature li::before{content:"";position:absolute;left:0;top:.62em;width:.5rem;height:1px;background:#a9c79a}
+
+/* process */
+.process-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:clamp(2rem,6vw,6rem);align-items:start}
+.process-grid img{border-radius:6px;aspect-ratio:4/3;object-fit:cover;position:sticky;top:2rem}
+.steps{list-style:none;padding:0;margin-top:2rem;counter-reset:s}
+.steps li{counter-increment:s;display:grid;grid-template-columns:3rem 1fr;gap:1rem;padding:1.4rem 0;border-top:1px solid var(--line)}
+.steps li::before{content:counter(s,decimal-leading-zero);font-family:var(--font-display);color:var(--clay);font-size:1.15rem}
+.steps h3{font-size:1.1rem;margin-bottom:.3rem}
+.steps p{color:var(--muted);font-size:var(--text-sm)}
+
+/* about */
+.about{background:var(--cream)}
+.about-grid{display:grid;grid-template-columns:.9fr 1.3fr;gap:clamp(2rem,6vw,6rem)}
+.about blockquote{font-family:var(--font-display);font-size:var(--text-xl);line-height:1.2;color:var(--fern)}
+.about p{color:var(--muted);max-width:58ch}
+.about p+p{margin-top:1rem}
+
+/* contact */
+.contact{text-align:left}
+.contact-card{display:grid;grid-template-columns:1.2fr 1fr;gap:clamp(2rem,5vw,4rem);border:1px solid var(--line);border-radius:10px;padding:clamp(1.8rem,5vw,3.5rem);background:#fff}
+.contact-card p{color:var(--muted);margin-top:1rem;max-width:48ch}
+.contact-list{list-style:none;padding:0;display:grid;gap:1.1rem;align-content:start}
+.contact-list span{display:block;font-size:var(--text-xs);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.contact-list a{font-size:var(--text-lg);text-decoration:none;color:var(--fern);font-weight:500;word-break:break-word}
+.contact-list a:hover{text-decoration:underline;text-underline-offset:4px}
+.contact .actions{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:1.8rem}
+.btn-outline{border:1px solid var(--fern);color:var(--fern)}
+.btn-outline:hover{background:var(--fern);color:var(--cream)}
+
+footer{border-top:1px solid var(--line);padding-block:2.5rem;font-size:var(--text-xs);color:var(--muted)}
+.foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem 2rem}
+.foot p{max-width:70ch}
+
+@media (max-width:860px){
+  .nav ul{display:none}
+  .intro,.feature-grid,.process-grid,.about-grid,.contact-card{grid-template-columns:1fr}
+  .services{grid-template-columns:1fr}
+  .service,.service+.service{padding:1.6rem 0;border-right:0;border-bottom:1px solid var(--line)}
+  .process-grid img{position:static}
+  .hero::after{background:linear-gradient(0deg,rgba(18,34,26,.88) 10%,rgba(18,34,26,.35) 70%,rgba(18,34,26,.2))}
+}
+</style>
+</head>
+<body>
+<header>
+  <nav class="nav wrap" aria-label="Main">
+    <a class="brand" href="#top">Mapfern <span>Travel</span></a>
+    <ul>
+      <li><a href="#trips">Trips</a></li>
+      <li><a href="#academic">Academic travel</a></li>
+      <li><a href="#how">How it works</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="top">
+  <section class="hero" aria-labelledby="hero-title">
+    <img src="assets/hero.webp" alt="Hanging bridge through a misty Costa Rican cloud forest" width="1536" height="1024">
+    <div class="wrap">
+      <p class="eyebrow" style="color:#c9dcbc">Gaithersburg, Maryland</p>
+      <h1 id="hero-title">Trips planned by a person, not a search bar.</h1>
+      <p>Vacations, group trips and academic travel, planned around how you actually like to travel.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="mailto:hsiangkunshih@mapfern.com?subject=Trip%20quote%20request&body=Destination%3A%0ATravel%20dates%3A%0ANumber%20of%20travelers%3A%0ABudget%20range%3A%0AAnything%20else%3A">Request a free quote</a>
+        <a class="btn btn-ghost" href="http://www.evotravelagent.com/portal/120723/" target="_blank" rel="noopener">Browse and book online</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="trips" aria-labelledby="trips-title">
+    <div class="wrap">
+      <div class="intro">
+        <div>
+          <p class="eyebrow">What I plan</p>
+          <h2 id="trips-title" style="margin-top:.7rem">Three kinds of trips, done carefully.</h2>
+        </div>
+        <p>Tell me where you want to go and what matters to you. I compare options across trusted travel suppliers, build the itinerary, and stay on hand from booking to the trip home.</p>
+      </div>
+      <div class="services">
+        <article class="service">
+          <div class="num">01</div>
+          <h3>Vacations</h3>
+          <p>Beach weeks, city breaks, all-inclusive resorts and vacation packages with flights, hotels and transfers, matched to your budget.</p>
+        </article>
+        <article class="service">
+          <div class="num">02</div>
+          <h3>Group trips</h3>
+          <p>Family reunions, friend getaways, clubs and celebrations. One planner keeps rooms, payments and details in order for everyone.</p>
+        </article>
+        <article class="service">
+          <div class="num">03</div>
+          <h3>Academic travel</h3>
+          <p>Field studies and educational trips for schools, universities and student groups, with Costa Rica as a specialty.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="academic" class="feature" aria-labelledby="academic-title">
+    <div class="wrap feature-grid">
+      <img src="assets/group.webp" alt="Students with backpacks walking along a volcanic beach trail" width="1100" height="619" loading="lazy">
+      <div>
+        <p class="eyebrow">Academic and student travel</p>
+        <h2 id="academic-title">I've done the field study. Now I plan them.</h2>
+        <p>I joined a university field study in Costa Rica as a chemistry student, so I know what a learning trip needs: a schedule that works, safe logistics and enough room to explore.</p>
+        <ul>
+          <li>Itineraries built around course goals and group size</li>
+          <li>Lodging, ground transport and activities in one plan</li>
+          <li>Clear costs per traveler for budgets and approvals</li>
+          <li>Costa Rica, Central America and beyond</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="how" aria-labelledby="how-title">
+    <div class="wrap process-grid">
+      <img src="assets/plan.webp" alt="Travel itinerary, passport, notebook and compass on a linen table" width="1100" height="825" loading="lazy">
+      <div>
+        <p class="eyebrow">How it works</p>
+        <h2 id="how-title" style="margin-top:.7rem">From first message to boarding pass.</h2>
+        <ol class="steps">
+          <li><div><h3>Tell me about the trip</h3><p>Send your destination ideas, dates, number of travelers and budget. A short email is plenty.</p></div></li>
+          <li><div><h3>Get a tailored quote</h3><p>I research options and send a quote within 2–3 business days.</p></div></li>
+          <li><div><h3>Book with confidence</h3><p>Once you approve, I handle the booking and send every confirmation in one place.</p></div></li>
+          <li><div><h3>Travel with support</h3><p>Questions before or during the trip come straight to me.</p></div></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="about" aria-labelledby="about-title">
+    <div class="wrap about-grid">
+      <div>
+        <p class="eyebrow">About</p>
+        <h2 id="about-title" class="sr" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">About Shawn Shih</h2>
+        <blockquote style="margin-top:.9rem">“Good trips come from good planning. That part is my job.”</blockquote>
+      </div>
+      <div>
+        <p>Hi, I'm Shawn Shih, the travel advisor behind Mapfern Travel. I'm based in Gaithersburg, Maryland, and studied chemistry at Salisbury University, where a field study in Costa Rica showed me how much a well-planned trip can teach.</p>
+        <p>Mapfern Travel is affiliated with Archer Travel Service, so your trips are booked through an established host agency with access to major travel suppliers. You get a planner who knows you, backed by the support of a larger agency.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact" aria-labelledby="contact-title">
+    <div class="wrap">
+      <div class="contact-card">
+        <div>
+          <p class="eyebrow">Start planning</p>
+          <h2 id="contact-title" style="margin-top:.7rem">Where do you want to go?</h2>
+          <p>Send a note with your idea, even a rough one. I'll reply with questions or a quote within 2–3 business days.</p>
+          <div class="actions">
+            <a class="btn btn-dark" href="mailto:hsiangkunshih@mapfern.com?subject=Trip%20quote%20request&body=Destination%3A%0ATravel%20dates%3A%0ANumber%20of%20travelers%3A%0ABudget%20range%3A%0AAnything%20else%3A">Request a free quote</a>
+            <a class="btn btn-outline" href="http://www.evotravelagent.com/portal/120723/" target="_blank" rel="noopener">Book online</a>
+          </div>
+        </div>
+        <ul class="contact-list">
+          <li><span>Email</span><a href="mailto:hsiangkunshih@mapfern.com">hsiangkunshih@mapfern.com</a></li>
+          <li><span>Call or text</span><a href="tel:+13024975281">(302) 497-5281</a></li>
+          <li><span>Contact card</span><a href="https://popl.co/card/MpkZ8Wrj/1" target="_blank" rel="noopener">Save my contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <p><strong>Mapfern Travel</strong> · Shawn Shih, Travel Advisor · Gaithersburg, MD<br>Affiliated with Archer Travel Service. CST #2001330-10 · FL #35395 · HI #TAR-6612 · WA #603352551.</p>
+    <p>© 2026 Mapfern Travel</p>
+  </div>
+</footer>
+</body>
+</html>
